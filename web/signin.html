@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="./css/signin.css" />
+    <script type="text/javascript" src="./js/signin.js"></script>
+</head>
+<body>
+    <div class="box">
+        <h2>登录</h2>
+        <input type="text" class="email" maxlength="35" id="email" />
+        <div class="box1">
+				<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" transform="translate(0,2.5)" xmlns="https://www.w3.org/2000/svg">
+					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+				</svg>
+				<span>请输入有效的电子邮件地址</span>
+			</div>
+        <input type="password" class="pass" maxlength="18" id="password" />
+        <div class="box1">
+				<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" transform="translate(0,2.5)" xmlns="https://www.w3.org/2000/svg">
+					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+				</svg>
+				<span>请输入密码</span>
+			</div>
+         <a href="./reset.html" class="forgetPass"><p>忘记了密码?</p></a>
+        <ul>
+			<li>电子邮件地址</li>
+			<li>输入您的密码</li>
+		</ul>
+        <div class="box3">
+			<svg transform="translate(1,1)" fill="rgb(95, 99, 103)" class="showPass" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="804" width="30" height="30">
+                <path d="M507.86 820.25c-146.71 0-273.8-103-354.56-189.5-52.79-56.5-52.79-145 0-201.52 80.76-86.45 207.85-189.5 354.56-189.5s273.8 103.06 354.53 189.5c52.82 56.51 52.82 145 0 201.53-80.73 86.43-207.8 189.49-354.53 189.49z m0-522.3c-125.81 0-239.12 93-312 171a89.67 89.67 0 0 0 0 122c72.91 78 186.22 171 312 171s239.12-93 312-171a89.59 89.59 0 0 0 0-122C747 391 633.7 298 507.86 298z" p-id="805"></path>
+                <path d="M507.86 704c-95.94 0-174-78.05-174-174s78-174 174-174 174 78 174 174-78.06 174-174 174z m0-289.74A115.76 115.76 0 1 0 623.61 530a115.9 115.9 0 0 0-115.75-115.78z" p-id="806"></path>
+            </svg>
+            <svg  transform="translate(0,6)" fill="rgb(95, 99, 103)" class="hiddenPass" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1805" width="32" height="32">
+                <path d="M660.8 680.4c-10.1 0-20-5.2-25.5-14.4l-59.4-99.1c-8.4-14.1-3.9-32.3 10.2-40.8 14.1-8.4 32.3-3.8 40.8 10.2l59.4 99.1c8.4 14.1 3.9 32.3-10.2 40.8-4.8 2.9-10.1 4.2-15.3 4.2zM819.1 581.3c-7.6 0-15.2-2.9-21-8.7l-79.2-79.3c-11.6-11.6-11.6-30.4 0-42 11.6-11.6 30.4-11.6 42 0l79.2 79.3c11.6 11.6 11.6 30.4 0 42-5.8 5.9-13.4 8.7-21 8.7zM363.2 680.4c-5.2 0-10.5-1.3-15.3-4.2-14.1-8.4-18.6-26.7-10.2-40.8l59.4-99.1c8.4-14.1 26.7-18.7 40.8-10.2 14.1 8.4 18.6 26.7 10.2 40.8L388.7 666c-5.6 9.3-15.4 14.4-25.5 14.4zM204.9 581.3c-7.6 0-15.2-2.9-21-8.7-11.6-11.6-11.6-30.4 0-42l79.2-79.3c11.6-11.6 30.4-11.6 42 0 11.6 11.6 11.6 30.4 0 42l-79.2 79.3c-5.8 5.9-13.4 8.7-21 8.7z" p-id="1806"></path>
+                <path d="M521.6 561.5c-82.8 0-204.7-28.4-314.9-163.5-1.3-1.6-2.3-2.8-3-3.6-10.9-10.8-11.8-28.4-1.7-40.3 10.6-12.5 29.4-14.1 41.9-3.5 1.3 1.1 4.4 4.3 8.9 9.8 95.5 117.1 198.9 141.7 268.8 141.7 120.7 0 258.1-124.6 271.6-144.4 9.1-13.2 27.3-17.5 40.9-8.8 13.5 8.6 18.1 25.8 10 39.6-14.1 23.7-168.8 173-322.5 173z" p-id="1807"></path>
+            </svg>
+            </div>
+        <a href="./signup.html" class="signUp"><p>创建账号</p></a>
+        <input type="button" class="button" value="下一步" />
+        <div class="copyright">Copyright &copy; 2021 DeepBlue</div>
+			<div class="power">
+				<p>Powered by</p>
+				<div class="author">LokHsu</div>
+				<div class="bullet"></div>
+				<div class="author">m1chael</div>
+			</div>
+    </div>
+</body>
+</html>
