@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class DB_Utils {
 
-	private static final String url = "jdbc:mysql://localhost:3306/service?useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+	private static final String url = "jdbc:mysql://localhost:3306/deepblue?useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 	private static final String driver = "com.mysql.cj.jdbc.Driver";
 	private static final String userName = "root";
 	private static final String password = "724462";
@@ -88,7 +88,7 @@ public class DB_Utils {
      *
 	 * @param sql sql增删改语句
 	 * @param s  sql语句中对应的参数（参数个数不定）
-	 * @return
+	 * @return 返回受影响的条数
 	 */
 	public static int ExecuteUpdate(String sql, Object ...s){
 		int result=0;
@@ -118,7 +118,7 @@ public class DB_Utils {
      * @param sql sql查询语句
      * @return 查询出的结果ArrayList
      */
-    public static List<Map<String, String>> ExcuteQuery(String sql){
+    public static List<Map<String, String>> ExecuteQuery(String sql){
         List<Map<String, String>> entityList = new ArrayList<>(); //存储结果
         Map<String, String> mapList = null;   //存储查询到的单条数据
         Connection connection = null;    //数据库连接
@@ -144,14 +144,14 @@ public class DB_Utils {
         try {
             while (resultSet.next()){
                 mapList = new HashMap<>();
-                for (Object col : ColNames)
-                    mapList.put((String) col,resultSet.getString((String) col));
+                for (String col : ColNames)
+                    mapList.put(col,resultSet.getString(col));
                 entityList.add(mapList);
             }
             System.out.println("test");
 //            resultSet.getObject(ColNames[0]);
         }catch (SQLException e){
-
+			e.printStackTrace();
         }
         return entityList;
     }
@@ -160,7 +160,7 @@ public class DB_Utils {
 	public static void main(String[] args) {
 		String sql = "update customer set customerPassword=? where customerId=?";
 		ExecuteUpdate(sql,"010501",1);
-		ExcuteQuery("select * from customer");
+		ExecuteQuery("select * from customer");
 	}
 }
 

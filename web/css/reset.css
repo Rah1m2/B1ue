@@ -43,7 +43,6 @@ h3 {
 	/*设置内边框控制字体位置无效*/
 	width: 300px;
 	height: 47px;
-	/* margin-top: 105px; */
 	margin-left: -150px;
 	border-radius: 5px;
 	display: inline-block;
@@ -58,6 +57,7 @@ h3 {
 	color: rgb(36, 120, 233);
 }
 .signIn:hover p {
+	cursor: pointer;
 	color: rgb(25, 80, 167);
 }
 .copyright {

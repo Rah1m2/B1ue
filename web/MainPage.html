@@ -1,10 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>test</title>
-</head>
-<body>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>new era</title>
+		<link href="css/images.css" rel="stylesheet" type="text/css"  />
+		<script type="text/javascript">
+			window.onload = function(){
+				var prev = document.querySelector(".preArrow");
+				var Screen = document.querySelector(".ScreenRoutine");
+				var oimg = Screen.querySelectorAll("img");
+				var i = 0;
+				var timer = setInterval(fn,4000);
+				function fn(){
+					i++;
+					console.log("oimg length:"+oimg.length)
+					if(i == oimg.length)
+						i = 0;
+					for(var j=0;j<oimg.length;j++)
+						oimg[j].style.opacity = 0;
+					oimg[i].style.opacity = 1;
+					
+				}
+			}
+		</script>
+	</head>
 
-</body>
+	<body>
+	<form method="post" action="mainPageServer">
+		<div class="guidingBox">
+			<img class="header_SteamLogo" src="img/SteamImgs/header_logo.png"/>
+			<img class="header_menu_hamburger" src="img/SteamImgs/header_menu_hamburger.png"/>
+		</div>
+		<div class="homePage">
+			<div class="content">
+				<span><a href="testPage.html">您的商店</a></span>
+				<span><a href="#">新鲜推荐</a></span>
+				<span><a href="#">类别</a></span>
+				<span><a href="#">点数商店</a></span>
+				<span><a href="#">新闻</a></span>
+				<span><a href="#">实验室</a></span>
+				<div class="searchBox">
+					<input id="store_nav_search_term" name="term" type="text" class="default" placeholder="搜索" size="22" autocomplete="off">
+					<a href="#"><img src="img/SteamImgs/search_icon_btn.png"></a>
+				</div>
+			</div>
+			
+			<div class="video_display">
+				<video loop muted autoplay src="video/mp4_page_bg_schinese.mp4" type="video/mp4">
+				</video>
+			</div>
+			
+			
+			<h2>精选和推荐</h2>
+			
+			<div class="ScreenRoutine">
+				<img src="img/SteamImgs/capsule_616x353.jpg"/>
+				<img src="img/SteamImgs/capsule_616x353_schinese.jpg"/>
+				<img src="img/SteamImgs/capsule_616x353_L4D2.jpg"/>
+				<div class="preArrow"></div>
+				<div class="rearArrow"></div>
+			</div>
+			<div class="slender">
+				<div class="gutter_header">
+					<a href="https://www.baidu.com/">
+						<img src="img/SteamImgs/steamcards_promo_02.png" />
+					</a>
+				</div>
+				<div class="gutter_words">礼物卡</div>
+				<div class="gutter_giftCard"><a href='#'>现已在steam 上推出</a></div>
+				<div class="gutter_words2">推荐</div>
+			</div>
+			<input name="test" type="submit" value="TESTSIGNAL">
+			
+		</div>
+	</form>
+	</body>
+
 </html>
