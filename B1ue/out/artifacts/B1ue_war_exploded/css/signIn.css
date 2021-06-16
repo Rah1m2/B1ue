@@ -1,0 +1,208 @@
+/**
+* @name: 同于注册界面的 css
+* @description: button: 下一步按钮, account pass: 输入框, 
+* @author: LokHsu
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+.box {
+	width: 358px;
+	height: 416px;
+	border: solid 1px rgb(210, 212, 216);
+	/* margin: auto auto; */
+	padding: 48px 40px 36px;
+	border-radius: 8px;
+	/* position: relative; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -224px;
+}
+h2 {
+	font-weight: normal;
+	padding-top: 40px;
+	padding-left: 44%;
+	padding-bottom: 3px;
+}
+.account, .pass {
+	width: 325px;
+	height: 43px;
+	padding: 3px 15px;
+	font-size: 16px;
+	border: solid 1px #ccc;
+	margin-top: 41px;
+	border-radius: 5px;
+}
+/* 禁用ie以及edge的自带密码显示功能 */
+.pass::-ms-reveal {
+	display: none;
+}
+.box1 {
+	width: 350px;
+	height: 17px;
+}
+.box .box1:nth-child(3) {
+	position: absolute;
+	top: 215px;
+	left: 55px;
+	display: none;
+}
+.box .box1:nth-child(5) {
+	margin-left: 15px;
+	display: none;
+}
+span {
+	display: inline-block;
+	font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+	font-size: 13px;
+	color: rgb(220,69,58);
+}
+.box1 svg {
+	width: 15px;
+	height: 15px;
+	fill: rgb(220,69,58);
+}
+.forgetPass {
+	width: 120px;
+	height: 37px;
+	float: left;
+	margin: 7px -10px 0px;
+	border-radius: 5px;
+	font-size: 0;
+	text-decoration: none;
+}
+.forgetPass p {
+	font-weight: 500;
+	text-align: center;
+	line-height: 37px;
+	font-size: 15px;
+	color: rgb(36, 120, 233);
+}
+.forgetPass:hover {
+	cursor: pointer;
+	background: rgb(247, 249, 254) no-repeat;
+}
+.forgetPass:hover p {
+	color: rgb(25, 80, 167);
+}
+ul li {
+	list-style-type: none;
+	font-size: 15px;
+	padding: 0px 6px;
+	background: white;
+	color: rgb(95, 99, 103);
+	transition: all 0.5s;
+}
+ul li:nth-child(1) {
+	position: absolute;
+	top: 181px;
+	left: 57px;
+}
+ul li:nth-child(2) {
+	position: absolute;
+	top: 272px;
+	left: 57px;
+}
+.box3 {
+	width: 33px;
+	height: 33px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	top: 266px;
+	left: 340px;
+}
+.box3 .showPass {
+	display: none;
+}
+#line {
+	display: none; /*刚开始不显示*/
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dashoffset: 20px;
+	stroke-dasharray: 20;
+	animation: offset 0.5s forwards;
+}
+@keyframes offset {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+.signUp {
+	width: 100px;
+	height: 37px;
+	/* margin-top: 25px;
+	margin-left: -20px; */
+	position: absolute;
+	top: 390px;
+	left: 30px;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+}
+.signUp p {
+	font-weight: 500;
+	text-align: center;
+	line-height: 35px;
+	font-size: 15px;
+	color: rgb(36, 120, 233);
+}
+.signUp:hover {
+	cursor: pointer;
+	background: rgb(247, 249, 254) no-repeat;
+}
+.signUp:hover p {
+	color: rgb(25, 80, 167);
+}
+.button {
+	width: 90px;
+	height: 36px;
+	border: none;
+	color: white;
+	background: rgb(28, 115, 232) no-repeat;
+	border-radius: 4px;
+	position: absolute;
+	top: 390px;
+	left: 305px;
+}
+.button:hover {
+	cursor: pointer;
+	background: rgb(30, 101, 202) no-repeat;
+}
+.copyright {
+	position: absolute;
+	top: 530px;
+	left: 50%;
+	margin-left: -91px;
+	font-size: 14px;
+	color: rgb(108, 117, 125);
+}
+.power {
+	position: absolute;
+	top: 558px;
+	left: 50%;
+	margin-left: -102px;
+}
+.power p{
+	display: inline-block;
+	font-size: 14px;
+	color: rgb(108, 117, 125);
+}
+.power .bullet {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin-bottom: 2px;
+	background-color: rgb(108, 117, 125);
+	border-radius: 50%;
+}
+.power .author {
+	display: inline-block;
+	font-size: 15px;
+	color: rgb(103, 120, 239);
+}

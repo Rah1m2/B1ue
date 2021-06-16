@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <link rel="stylesheet" href="./css/cxcalendar.css">
+    <link rel="stylesheet" type="text/css" href="./css/TODOList.css" />
+	<script type="text/javascript" src="./js/TODOList.js"></script>
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="js/cxcalendar.js"></script>
+
+    <!-- <script src="js/cxcalendar.languages.js"></script> -->
+</head>
+<body>
+    <div class="dialog-mask opacity"></div>
+    <div class="addList">
+        <input type="text" class="add-title" placeholder="New To-Do" maxlength="35">
+        <!-- 英文给130 -->
+        <textarea class="postscript" rows="4" maxlength="65" placeholder="Notes"></textarea>
+        <input id="time" type="text" data-type="datetime" data-end-date="2045" placeholder="When" data-format="Y-m-d H:i">
+        <svg class="schedule" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7911" width="26" height="26"><path d="M784 160H672v-32c0-17.6-14.4-32-32-32s-32 14.4-32 32v32H416v-32c0-17.6-14.4-32-32-32s-32 14.4-32 32v32H240c-88 0-160 72-160 160v448c0 88 72 160 160 160h544c88 0 160-72 160-160V320c0-88-72-160-160-160z m-544 64h112v32c0 17.6 14.4 32 32 32s32-14.4 32-32v-32h192v32c0 17.6 14.4 32 32 32s32-14.4 32-32v-32h112c52.8 0 96 43.2 96 96v32H144v-32c0-52.8 43.2-96 96-96z m544 640H240c-52.8 0-96-43.2-96-96V416h736v352c0 52.8-43.2 96-96 96z" p-id="7912" fill="#bfbfbf"></path><path d="M288 672h64c17.6 0 32 14.4 32 32s-14.4 32-32 32h-64c-17.6 0-32-14.4-32-32s14.4-32 32-32z m192 0h64c17.6 0 32 14.4 32 32s-14.4 32-32 32h-64c-17.6 0-32-14.4-32-32s14.4-32 32-32z m192 0h64c17.6 0 32 14.4 32 32s-14.4 32-32 32h-64c-17.6 0-32-14.4-32-32s14.4-32 32-32zM288 512h64c17.6 0 32 14.4 32 32s-14.4 32-32 32h-64c-17.6 0-32-14.4-32-32s14.4-32 32-32z m192 0h64c17.6 0 32 14.4 32 32s-14.4 32-32 32h-64c-17.6 0-32-14.4-32-32s14.4-32 32-32z m192 0h64c17.6 0 32 14.4 32 32s-14.4 32-32 32h-64c-17.6 0-32-14.4-32-32s14.4-32 32-32z" p-id="7913" fill="#bfbfbf"></path></svg>
+        <svg class="remind" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5854" width="26" height="26"><path d="M514.1 960.2c-227.9 0-413.4-185.4-413.4-413.4s185.4-413.4 413.4-413.4 413.4 185.4 413.4 413.4S742 960.2 514.1 960.2z m0-764.3c-193.5 0-351 157.4-351 351s157.4 351 351 351 351-157.4 351-351-157.4-351-351-351z" fill="#bfbfbf" p-id="5855"></path><path d="M907.3 248.2c-7.3 0-14.6-2.5-20.5-7.7l-137.6-120c-13-11.3-14.3-31-3-44s31-14.3 44-3l137.6 120c13 11.3 14.3 31 3 44-6.2 7.1-14.8 10.7-23.5 10.7zM121 248.2c-8.7 0-17.4-3.6-23.5-10.7-11.3-13-10-32.7 3-44l137.6-120c13-11.3 32.7-10 44 3s10 32.7-3 44l-137.6 120c-6 5.2-13.3 7.7-20.5 7.7zM613.1 773.8c-8 0-16-3-22.1-9.1L460.3 634V365c0-17.2 14-31.2 31.2-31.2s31.2 14 31.2 31.2v243.1l112.4 112.4c12.2 12.2 12.2 31.9 0 44.1-6.1 6.1-14.1 9.2-22 9.2z" fill="#bfbfbf" p-id="5856"></path></svg>
+        <input type="button" class="button" value="提交" />
+    </div>
+
+    <aside class="sidebar">
+        <div class="inbox">
+            <img src="./img/inbox.png" width="24px" />
+            <a href="#">Inbox</a>
+        </div>
+        <div class="today">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="3099" width="26" height="26">
+                <path d="M313.991837 914.285714c-20.37551 0-40.228571-6.269388-56.946939-18.808163-30.302041-21.942857-44.930612-58.514286-38.661225-95.085714l24.032654-141.061225c3.134694-18.285714-3.134694-36.571429-16.195919-49.110204L123.297959 509.910204c-26.644898-26.122449-36.04898-64.261224-24.555102-99.787755 11.493878-35.526531 41.795918-61.126531 78.889796-66.35102l141.583674-20.375511c18.285714-2.612245 33.959184-14.106122 41.795918-30.30204l63.216326-128.522449C440.946939 130.612245 474.383673 109.714286 512 109.714286s71.053061 20.897959 87.24898 54.334694L662.987755 292.571429c8.359184 16.195918 24.032653 27.689796 41.795918 30.30204l141.583674 20.375511c37.093878 5.22449 67.395918 30.82449 78.889796 66.35102 11.493878 35.526531 2.089796 73.665306-24.555102 99.787755l-102.4 99.787755c-13.061224 12.538776-19.330612 31.346939-16.195919 49.110204l24.032654 141.061225c6.269388 37.093878-8.359184 73.142857-38.661225 95.085714-30.302041 21.942857-69.485714 24.555102-102.4 7.314286L538.122449 836.440816c-16.195918-8.359184-35.526531-8.359184-51.722449 0l-126.955102 66.87347c-14.628571 7.314286-30.302041 10.971429-45.453061 10.971428z m162.481632-96.653061z" fill="#F2CB51" p-id="3100"></path>
+            </svg>
+            <a href="#">Today</a>
+        </div>
+    </aside>
+    <section class="content">
+        <div class="inbox">
+            <img src="./img/inbox.png" width="32px" />
+            <h2>Inbox</h2>
+        </div>
+        <div class="list">
+            <h1>30</h1>
+            <div class="underline"></div>
+            <div class="TODO">
+                <h3>添加提醒事项，这样就不会忘记了</h3>
+                <div class="remind"></div>
+                <div class="garage"></div>
+                <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+                <h3>添加提醒事项，这样就不会忘记了</h3>
+                <div class="remind"></div>
+                <div class="garage"></div>
+                <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+                <h3>添加提醒事项，这样就不会忘记了</h3>
+                <div class="garage"></div>
+                <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+            </div>
+        </div>
+
+    <div class="list">
+        <h1>01</h1>
+        <div class="underline"></div>
+    <div class="TODO">
+        <h3>添加提醒事项，这样就不会忘记了</h3>
+        <div class="remind"></div>
+        <div class="garage"></div>
+        <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+        <h3>添加提醒事项，这样就不会忘记了</h3>
+        <div class="remind"></div>
+        <div class="garage"></div>
+        <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+        <h3>添加提醒事项，这样就不会忘记了</h3>
+        <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+    </div>
+    </div>
+
+    <div class="list">
+        <h1>02</h1>
+        <div class="underline"></div>
+    <div class="TODO">
+        <h3>添加提醒事项，这样就不会忘记了</h3>
+        <div class="remind"></div>
+        <div class="garage"></div>
+        <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+        <h3>添加提醒事项，这样就不会忘记了</h3>
+        <div class="remind"></div>
+        <div class="garage"></div>
+        <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+        <h3>添加提醒事项，这样就不会忘记了</h3>
+        <p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+    </div>
+    </div>
+
+    <div class="add">
+        <svg class="icon" viewBox="0 0 1024 1024"  transform="translate(9,9)" xmlns="http://www.w3.org/2000/svg" p-id="5249" width="32" height="32">
+            <path d="M902.343 570.936h-331.78v331.833c0 32.337-26.226 58.537-58.564 58.537-32.337 0-58.563-26.2-58.563-58.537V570.936H121.654c-32.364 0-58.564-26.2-58.564-58.538 0-32.325 26.203-58.537 58.564-58.537h331.78V122.028c0-32.325 26.226-58.537 58.563-58.537 32.338 0 58.564 26.213 58.564 58.537v331.834h331.78c32.364 0 58.565 26.211 58.565 58.535-0.001 32.337-26.2 58.536-58.565 58.536z" p-id="5250" fill="#ffffff"></path>
+        </svg>
+    </div>
+</section>
+    <script>$("#time").cxCalendar();</script>
+    <script type="text/javascript">
+        var list = document.querySelectorAll(".list");
+        alert(list[0]);
+        var TODO = list[0].querySelector(".TDDO");
+        var h3 = TODO.querySelectorAll(".h3");
+        h3[0].innerHTML = "hello test";
+        alert("1111");
+    </script>
+</body>
+</html>

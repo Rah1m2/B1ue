@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "MyFontName";//自定义字体名称
+    src: url("../fonts/MotivaSans-Bold.ttf");
+}
+*{
+	margin: 0;
+	padding: 0;
+	/*overflow-x: hidden;*/
+}
+a{
+	text-decoration: none;
+}
+
+
+.guidingBox{
+	width: 100vw;
+	height: 61.99px;
+	position:fixed;
+	
+	/*background: url(../img/header_logo.png);*/
+	background-size: auto;
+	background-color: #171A21;	
+	background-repeat: no-repeat;
+	z-index: 10;
+/*	border: solid 1px black;*/
+}
+
+/*.SteamLogo{
+	width: 156.2px;
+	height: 36px;
+	position: absolute;
+}*/
+
+.header_SteamLogo{
+	/*margin: 15px 0px 0px 45%;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -18px;
+	margin-left: -87px;
+	width: 157px;
+	height: 36px;
+	/*transform: scale(0.5,0.5);*/
+}
+
+.header_menu_hamburger{
+	position: absolute;
+	top: 9px;
+	left: 8px;
+	width: 35.68px;
+	height: 31px;
+	cursor: pointer;
+}
+
+.content{
+	position: relative;
+	top: 62px;
+	left: 60px;
+	width: 940px;
+	height: 35px;
+	text-shadow:1px 1px 1px black;
+	/*border: solid 1px white;*/
+	background: linear-gradient(to right,#486695 30%, #172f79);
+	z-index: 9;
+}
+
+.content a{
+	/*position: absolute;*/
+	font-size: 13px;
+	font-family: helvetica;
+	font-weight: bold;
+	/*padding: 10px,0px,10px,22px;*/
+	margin: 0px 15px 0px 15px;
+	vertical-align: -40%;
+	color: #D9D9D9;
+}
+
+.content .searchBox{
+	position: absolute;
+	top: 1.7px;
+	right: 5px;
+	width: 202px;
+	height: 28.99px;
+	border-radius: 3px;
+	background-color: #316282;
+
+	/*border: solid 1px black;*/
+}
+
+.ScreenRoutine{
+	position: absolute;
+	top: 569px;
+	/*left: 249.645px;
+	width: 616px;*/
+	/*height: 352.99px;*/
+	left: 203.645px;
+	width: 708px;
+	height: 352.99px;
+	background-position: center;
+	/*border: solid 1px white;*/
+}
+
+.ScreenRoutine img{
+	transition: All 1s;
+	position: absolute;
+	/*background-position: center;*/
+	margin: 0px 0px 0px 46px;
+	opacity: 0;
+}
+.ScreenRoutine img:nth-child(1){
+	opacity: 1;
+	z-index: 0;
+}
+
+.preArrow{
+	margin-top: -18px;
+	margin-left: 20px;
+	position: absolute;
+	top: 50%;
+	width: 23px;
+	height: 36px;
+	/*border: solid 1px white;*/
+	background: url(../img/SteamImgs/arrows.png) -23px;
+	cursor: pointer;
+
+}
+
+.rearArrow{
+	margin-top: -18px;
+	margin-left: 0px;
+	margin-right: 20px;
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	width: 23px;
+	height: 36px;
+	/*border: solid 1px white;*/
+	background: url(../img/SteamImgs/arrows.png);
+	cursor: pointer;
+}
+
+.slender{
+	position: absolute;
+	top: 560px;
+	left: 30px;
+	height: 500px;
+	width: 170px;
+	border: solid 1px white;
+}
+
+.slender .gutter_header{
+	position: absolute;
+	top: 0px;
+	left: 6px;
+	height: 1px;
+	width: 170px;
+	/*border-bottom: solid 1px deepskyblue;*/
+	
+	/*border: solid 1px white;*/
+}
+.slender .gutter_header a{
+	height: 10px;
+	width: 1px;
+	/*border-bottom: solid 10px white;*/
+}
+.slender .gutter_header img{
+	height: 110px;
+}
+.slender .gutter_words,.gutter_words2{
+	position: absolute;
+	top: 115px;
+	left: 5px;
+	color: #C6D4DF;
+	font-size: 12px;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.slender .gutter_words2{
+	top: 160px;
+}
+
+.slender .gutter_giftCard a{
+	position: absolute;
+	top: 135px;
+	left: 5px;
+	font-size: 13px;
+	font-family: helvetica, sans-serif;
+	color: #66C0F4;
+}
+
+.homePage{
+	height: 10000px;
+	width: 1350px;
+	background-color: #1B2838;
+	/*overflow: hidden;*/
+	
+}
+
+.test{
+	height: 70000px;
+}
+
+.searchBox img{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	/*border: 1px solid #ffffff;*/ /*被选中的话周围出现白框*/
+	/*border: 1px solid #4c9acc;
+	box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.0);*/
+}
+
+input{
+	background: #316282;
+	border: none;
+	outline: none;
+	height: 29px;
+	/*text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.1);
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300;*/
+	/*color: #0e1c25;*/
+}
+
+.searchBox img:hover{
+	background-image: url(../img/SteamImgs/search_icon_btn_over.png);
+}
+
+.searchBox:hover{
+	border: solid 1px deepskyblue;
+}
+
+.slender .gutter_giftCard a:hover{
+	color: #FFFFFF;
+}
+
+.video_display{
+	width: 100vw;
+	height: 500px;
+	/*border: solid 1px white;*/
+	object-fit: cover;
+	
+}
+
+.video_display video{
+	position: absolute;
+	left: -500px;
+/*	overflow: hidden;*/
+	/*border: solid 1px white;*/
+	z-index: 8;
+	/*background: #00BFFF;*/
+}
+
+/*569*/
+
+

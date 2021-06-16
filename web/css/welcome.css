@@ -1,0 +1,40 @@
+* {
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+.signIn {
+	width: 140px;
+	height: 50px;
+	border-radius: 6px;
+	border: none;
+	color: white;
+	background: rgb(28, 115, 232) no-repeat;
+	text-decoration: none;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+    margin-left: -70px;
+}
+.signIn:hover {
+	cursor: pointer;
+	background: rgb(30, 101, 202) no-repeat;
+}
+.signIn p {
+	text-align: center;
+	line-height: 50px;
+	font-size: 15px;
+}
+.checkList {
+    position: absolute;
+    width: 600px;
+    height: 650px;
+    transform: scale(0.7,0.9);
+}
+.readList {
+    position: absolute;
+	right: 0%;
+    width: 600px;
+    height: 650px;
+    transform: scale(1,1.1);
+}

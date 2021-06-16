@@ -1,0 +1,286 @@
+@font-face {
+	font-family: "Product Sans";
+	src: url(../img/Product-Sans-Regular-2.ttf);
+}
+* {
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+.box {
+	width: 668px;
+	height: 510px;
+	border: solid 1px rgb(210, 212, 216);
+	padding: 48px 40px 36px;
+	border-radius: 8px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -296px;
+	margin-left: -374px;
+}
+.logo {
+	width: 150px;
+	display: inline-block;
+	font-size: 0px;
+}
+.logo p {
+	font-family: "Product Sans";
+	font-weight: 500;
+	display: inline-block;
+	font-size: 25px;
+}
+.logo p:nth-child(1) {
+	color: rgb(67, 132, 244);
+}
+.logo p:nth-child(2) {
+	color: rgb(233, 68, 54);
+}
+.logo p:nth-child(3) {
+	color: rgb(251, 189, 5);
+}
+.logo p:nth-child(4) {
+	color: rgb(67, 132, 244);
+}
+.logo p:nth-child(5) {
+	color: rgb(52, 168, 83);
+}
+.logo p:nth-child(6) {
+	color: rgb(233, 68, 54);
+}
+.logo p:nth-child(7) {
+	color: rgb(251, 189, 5);
+}
+.logo p:nth-child(8) {
+	color: rgb(52, 168, 83);
+}
+.logo p:nth-child(9) {
+	color: rgb(67, 132, 244);
+}
+h2 {
+	font-weight: normal;
+	padding-top: 8px;
+	padding-bottom: 32px;
+}
+.name,
+.pass {
+	width: 155px;
+	height: 22px;
+	padding: 6px 8px;
+	font-size: 15px;
+	margin-right: 3px; /*左右两个间距*/
+	border: solid 1px #ccc;
+	border-radius: 5px;
+}
+.pass::-ms-reveal {   /* 禁用ie以及edge的自带密码显示功能 */
+	display: none;
+}
+ul li {
+	list-style-type: none;
+	font-size: 15px;
+	color: rgb(95, 99, 103);
+	transition: all 0.5s;
+}
+ul li:nth-child(1) {
+	position: absolute;
+	top: 159px;
+	left: 51px;
+}
+ul li:nth-child(2) {
+	position: absolute;
+	top: 159px;
+	left: 232px;
+}
+ul li:nth-child(3) {
+	position: absolute;
+	top: 233px;
+	left: 51px;
+}
+ul li:nth-child(4) {
+	position: absolute;
+	top: 357px;
+	left: 51px;
+}
+ul li:nth-child(5) {
+	position: absolute;
+	top: 357px;
+	left: 232px;
+}
+.account {
+	width: 336px;
+	height: 22px;
+	padding: 6px 8px;
+	font-size: 15px;
+	border: solid 1px #ccc;
+	margin-top: 38px;
+	border-radius: 5px;
+}
+.box1 {
+	width: 350px;
+	height: 20px;
+	margin: 2px 0px 5px 10px;
+}
+.box .box1:nth-child(5) {
+	position: absolute;
+	top: 185px;
+	left: 40px;
+	visibility: hidden;
+}
+
+.box .box1:nth-child(7) {
+	position: absolute;
+	top: 260px;
+	left: 40px;
+}
+
+.box .box1:nth-child(13) {
+	position: absolute;
+	top: 385px;
+	left: 40px;
+}
+span {
+	display: inline-block;
+	font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+	font-size: 13px;
+	color: rgb(84, 86, 92);
+}
+.box1 svg {
+	width: 15px;
+	height: 15px;
+	fill: rgb(220, 69, 58);
+	display: none;
+}
+.change-account {
+	/*设置内边框控制字体位置无效*/
+	width: 155px;
+	height: 37px;
+	margin: 25px -10px 27px;
+	border-radius: 5px;
+}
+.change-account p {
+	font-weight: 500;
+	text-align: center;
+	line-height: 37px;
+	font-size: 15px;
+	color: rgb(36, 120, 233);
+}
+.change-account:hover {
+	cursor: pointer;
+	background: rgb(247, 249, 254) no-repeat;
+}
+.change-account:hover p {
+	color: rgb(25, 80, 167);
+}
+.box3 {
+	width: 18px;
+	height: 18px;
+	padding: 11px 11px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	top: 410px;
+	left: 32px;
+}
+.box3:hover {
+	background: rgb(247, 248, 248);
+}
+.box3:hover .check-box {
+	border: 2px solid rgb(50, 51, 54);
+}
+.check-box {
+	width: 14px;
+	height: 14px;
+	border-radius: 2px;
+	/* background: url("../img/打勾.png") center/14px; */
+	border: 2px solid rgb(95, 99, 103);
+}
+#line {
+	display: none; /*刚开始不显示*/
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dashoffset: 20px;
+	stroke-dasharray: 20;
+	animation: offset 0.5s forwards;
+}
+@keyframes offset {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+.box3 + p {
+	width: 75px;
+	height: 16px;
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	top: 419px;
+	left: 70px;
+}
+.signIn {
+	/*设置内边框控制字体位置无效*/
+	width: 120px;
+	height: 37px;
+	margin-top: 78px;
+	margin-left: -5px;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+}
+.signIn p {
+	font-weight: 500;
+	text-align: center;
+	line-height: 37px;
+	font-size: 15px;
+	color: rgb(36, 120, 233);
+}
+.signIn:hover {
+	cursor: pointer;
+	background: rgb(247, 249, 254) no-repeat;
+}
+.signIn:hover p {
+	color: rgb(25, 80, 167);
+}
+.button {
+	width: 90px;
+	height: 36px;
+	border: none;
+	color: white;
+	background: rgb(28, 115, 232) no-repeat;
+	border-radius: 4px;
+	position: absolute;
+	top: 493px;
+	left: 303px;
+}
+.button:hover {
+	cursor: pointer;
+	background: rgb(30, 101, 202) no-repeat;
+}
+.box2 {
+	/* display: inline-block; */
+	width: 252px;
+	height: 507px;
+	position: absolute;
+	top: 120px;
+	left: 446px;
+}
+.box2 div {
+	width: 244px;
+	height: 44px;
+	text-align: center;
+	font-weight: 300;
+	font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+	font-size: 16px;
+	color: rgb(85, 85, 88);
+}
+@media screen and (max-width: 900px) {
+	.box {
+		width: 368px;
+		height: 490px;
+		margin-top: -287px;
+		margin-left: -224px;
+	}
+	.box2 {
+		display: none;
+	}
+}

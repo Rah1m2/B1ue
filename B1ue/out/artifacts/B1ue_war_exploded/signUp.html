@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Sign up</title>
+		<link rel="stylesheet" type="text/css" href="./css/signUp.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<script type="text/javascript" src="./js/signUp.js"></script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="logo">
+				<p>G</p>
+				<p>o</p>
+				<p>o</p>
+				<p>g</p>
+				<p>l</p>
+				<p>e</p>
+			</div>
+			<h2>创建您的 Google 账号</h2>
+			<input type="text" class="name" maxlength="18" id="surname" autocomplete="off"/>
+			<input type="text" class="name" maxlength="18" id="name" autocomplete="off"/>
+			<div class="box1">
+				<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" transform="translate(0,2.5)">
+					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+				</svg>
+				<span>请输入名字和姓氏</span>
+			</div>
+			<input type="text" class="account" maxlength="35" id="account" autocomplete="off"/>
+			<div class="box1">
+				<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" transform="translate(0,2.5)">
+					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+				</svg>
+				<span>您可以使用字母、数字和英文句点</span>
+			</div>
+			<div class="change-account"><p>改用使用我的手机号</p></div>
+			<input type="password" class="pass" maxlength="18" id="password" autocomplete="off"/>
+			<input type="password" class="pass" maxlength="18" id="confirmPassword" autocomplete="off"/>
+			<ul>
+				<li>姓氏</li>
+				<li>名字</li>
+				<li>电子邮件地址</li>
+				<li>密码</li>
+				<li>确认</li>
+			</ul>
+			<div class="box1">
+				<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" transform="translate(0,2.5)">
+					<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+				</svg>
+				<span>使用 8 个或更多字符（字母、数字和符号的组合）</span>
+			</div>
+			<div class="box3">
+				<svg class="check-box">
+					<polyline id="line" fill="none" stroke="#fff" stroke-width="1.8" points="1.5,8 4.5,11.5 12.5,3.5" />
+				</svg>
+			</div>
+			<p id="page">显示密码</p>
+			<a href="./signIn.html" class="signIn"><p>登录现有账号</p></a>
+			<input type="button" class="button" value="下一步" />
+			<div class="box2">
+				<img src="./img/account.svg" width="244" height="244" />
+				<div>只需一个帐号，您便可以使用 Google 的所有产品和服务。</div>
+			</div>
+		</div>
+	</body>
+</html>
