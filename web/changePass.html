@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Reset Password</title>
+		<link rel="stylesheet" type="text/css" href="./css/changePass.css" />
+		<script type="text/javascript" src="./js/changePass.js"></script>
+		<script src="./js/iconfont.js"></script>
+	</head>
+	<body>
+		<div class="box">
+			<h3>修改密码</h3>
+			<p>如需继续操作，请先验证您的身份</p>
+			<ul>
+				<li>密码</li>
+				<li>新密码</li>
+				<li>确认</li>
+			</ul>
+			<!-- 账号模块 -->
+			<input type="text" class="oldPassword" maxlength="35" />
+			<div class="box1">
+				<svg class="icon" aria-hidden="true" transform="translate(0,3)">
+					<use xlink:href="#icon-warning"></use>
+				</svg>
+				<span>密码错误</span>
+			</div>
+			<input type="button" class="button" value="确认" id="confirm" />
+			<!-- 修改密码模块 -->
+			<input type="password" class="password" maxlength="18" />
+			<input type="password" class="confirmPassword" maxlength="18" />
+			<div class="box1">
+				<svg class="icon" aria-hidden="true" transform="translate(0,3)">
+					<use xlink:href="#icon-warning"></use>
+				</svg>
+				<span>请输入新密码</span>
+			</div>
+			<div class="box1">
+				<svg class="icon" aria-hidden="true" transform="translate(0,3)">
+					<use xlink:href="#icon-warning"></use>
+				</svg>
+				<span>请输入确认密码</span>
+			</div>
+			<input type="button" class="button" value="修改" id="changePassword" />
+
+			<a href="./userProfile.html" class="userProfile"><p>返回</p></a>
+		</div>
+	</body>
+</html>

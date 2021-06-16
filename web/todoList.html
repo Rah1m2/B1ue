@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>todoList</title>
+		<link rel="stylesheet" href="./css/cxcalendar.css" />
+		<link rel="stylesheet" type="text/css" href="./css/todoList.css" />
+		<script type="text/javascript" src="./js/todoList.js"></script>
+		<!-- <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script> -->
+		<script src="./js/jquery.min.js"></script>
+		<script src="js/cxcalendar.js"></script>
+		<script src="./js/iconfont.js"></script>
+		<!-- <script src="js/cxcalendar.languages.js"></script> -->
+	</head>
+	<body>
+		<div class="welcome">
+			<img class="fly" src="./img/butterfly.png" width="150px" />
+		</div>
+		<div class="dialog-mask opacity"></div>
+		<div class="addList">
+			<input type="text" class="add-title" placeholder="New To-Do" maxlength="35" />
+			<textarea class="postscript" rows="4" maxlength="65" placeholder="Notes"></textarea>
+			<input
+				id="time"
+				type="text"
+				data-type="datetime"
+				readonly="readonly"
+				data-end-date="2045"
+				placeholder="When"
+				data-format="Y-m-d H:i"
+			/>
+			<svg class="icon schedule" aria-hidden="true">
+				<use xlink:href="#icon-schedule"></use>
+			</svg>
+			<svg class="icon enableAlarm" aria-hidden="true">
+				<use xlink:href="#icon-enableAlarm"></use>
+			</svg>
+			<div class="disableAlarm"></div>
+			<input type="button" class="button" value="提交" />
+		</div>
+
+		<aside class="sidebar">
+			<div class="inbox">
+				<img src="./img/inbox.png" width="24px" />
+				<span>Inbox</span>
+				<p></p>
+			</div>
+			<div class="today">
+				<svg class="icon star" aria-hidden="true">
+					<use xlink:href="#icon-today"></use>
+				</svg>
+				<span>Today</span>
+				<p></p>
+			</div>
+			<div class="box">
+				<svg class="icon function" aria-hidden="true">
+					<use xlink:href="#icon-function"></use>
+				</svg>
+				<div class="profile">个人资料</div>
+				<div class="signOut">退出</div>
+			</div>
+		</aside>
+
+		<section class="content">
+			<div class="inbox">
+				<img src="./img/inbox.png" width="32px" />
+				<h2>Inbox</h2>
+			</div>
+			<svg class="icon add" aria-hidden="true">
+				<use xlink:href="#icon-add"></use>
+			</svg>
+			<div class="singleDay">
+				<h1>30</h1>
+				<div class="underline">Today</div>
+				<div class="list">
+					<input type="checkbox" class="checkbox" />
+					<h3 id="3">添加提醒事项</h3>
+					<div class="remind"></div>
+					<div class="time">20:01</div>
+					<div class="trashcan"></div>
+					<p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+				</div>
+				<div class="list">
+					<input type="checkbox" class="checkbox" />
+					<h3>添加提醒事项，这样就不会忘记了</h3>
+					<div class="remind"></div>
+					<div class="time">7:01</div>
+					<div class="trashcan"></div>
+					<p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+				</div>
+				<div class="list">
+					<input type="checkbox" class="checkbox" />
+					<h3>添加提醒事项，这样就不会忘记了</h3>
+					<div class="trashcan"></div>
+					<p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+				</div>
+			</div>
+			<div class="singleDay">
+				<h1>01</h1>
+				<div class="underline">Tomorrow</div>
+				<div class="list">
+					<input type="checkbox" class="checkbox" />
+					<h3>添加提醒事项，这样就不会忘记了</h3>
+					<div class="remind"></div>
+					<div class="trashcan"></div>
+					<p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+				</div>
+				<div class="list">
+					<input type="checkbox" class="checkbox" />
+					<h3>添加提醒事项，这样就不会忘记了</h3>
+					<div class="remind"></div>
+					<div class="trashcan"></div>
+					<p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+				</div>
+				<div class="list">
+					<input type="checkbox" class="checkbox" />
+					<h3>添加提醒事项，这样就不会忘记了</h3>
+					<div class="trashcan"></div>
+					<p>In the hope of clearing my family name and my sincere desire to give my children.</p>
+				</div>
+			</div>
+		</section>
+		<script>
+			$("#time").cxCalendar();
+		</script>
+	</body>
+</html>

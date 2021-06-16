@@ -138,7 +138,6 @@ window.onload = function () {
 			//邮箱格式满足要求
 			var data = "action=verification&account=" + account.value;
 			var result = sendRequestByPost(data); //去链接ajax
-			alert(result);
 			if (result) {
 				//邮箱可以被注册
 				warning[2] = false;
@@ -335,13 +334,15 @@ window.onload = function () {
 			svg[2].style.display = "inline";
 			span[2].style.color = "rgb(220, 69, 58)";
 			confirmPassword.style.borderColor = "rgb(220,69,58)";
+            confirmPassword.style.outlineColor = "rgb(220, 69, 58)";
 		} else if (password.value !== confirmPassword.value) {
 			warning[4] = true;
 			span[2].innerHTML = "这两个密码不一致，请重试";
 			svg[2].style.display = "inline";
 			span[2].style.color = "rgb(220, 69, 58)";
 			li[4].style.color = "rgb(220, 69, 58)";
-			confirmPassword.style.borderColor = "rgb(220,69,58)";
+			confirmPassword.style.borderColor = "rgb(220, 69, 58)";
+            confirmPassword.style.outlineColor = "rgb(220, 69, 58)";
 		} else {
 			warning[4] = false;
 			span[2].innerHTML = "使用 8 个或更多字符（字母、数字和符号的组合）";
@@ -349,11 +350,12 @@ window.onload = function () {
 			svg[2].style.display = "none";
 			li[4].style.color = "rgb(95, 99, 103)";
 			confirmPassword.style.borderColor = "#ccc";
+            confirmPassword.style.outlineColor = "rgb(0, 104, 231)";
 		}
 		for (var i = 0; i < warning.length; i++) {
 			if (warning[i] == true) return;
 		}
-		var data = "action=register&name=" + surname.value + name.value + "&account=" + account.value + "&password=" + password.value;
+		var data = "action=register&name=" + encodeURIComponent(encodeURIComponent(surname.value)) + encodeURIComponent(encodeURIComponent(name.value)) + "&account=" + account.value + "&password=" + password.value;
 		result = sendRequestByPost(data);
 		if (result) {
 			alert("注册成功");
@@ -389,7 +391,6 @@ function sendRequestByPost(data) {
 			//获取服务器的响应值
 			var result = xmlReq.responseText;
 			//后续操作
-			alert("get esp:"+result);
 			if (result == "success")
                 flag = true;
 			else

@@ -1,0 +1,388 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/**
+* 加载界面
+*/
+.welcome {
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 500;
+    /*display: none;*/
+}
+
+.fly {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    transform: scale(1, 1);
+    animation: fly 0.9s linear infinite;
+}
+@keyframes fly {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1.15, 1);
+    }
+    50% {
+        transform: scale(1.25, 1);
+    }
+    75% {
+        transform: scale(1.15, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/**
+* 侧边栏样式从此开始
+*/
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    background: rgb(245, 246, 247);
+}
+.sidebar a {
+    float:left;
+    line-height: 30px;
+    text-decoration: none;
+    color: rgb(86, 90, 92);
+}
+.sidebar p {
+    position: absolute;
+    top: 6px;
+    right: 19px;
+    font-size: 14px;
+    color: rgb(158, 160, 163);
+}
+.sidebar .inbox {
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 42px;
+    margin: 40px 20px 15px 20px;
+    position: relative;
+    background: rgb(225, 227, 230);
+}
+.sidebar .inbox:hover {
+    background: rgb(225, 227, 230);
+}
+.inbox img {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+}
+.sidebar .today {
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 42px;
+    margin: 5px 20px 5px 20px;
+    position: relative;
+}
+.sidebar .today:hover {
+    background: rgb(225, 227, 230);
+}
+.today .star {
+    font-size: 26px;
+    position: absolute;
+    top: 1px;
+    left: 10px;
+}
+.sidebar .box{
+    position: absolute;
+    bottom: 10px;
+    right: 17px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.box:hover {
+    width: 90px;
+	height: 100px;
+}
+.sidebar .function {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transition: all 0.2s linear;
+}
+.signOut {
+	width: 90px;
+	height: 30px;
+	border: none;
+	color: white;
+    list-style-type: none;
+    cursor: pointer;
+	background: rgb(220, 69, 58) no-repeat;
+	border-radius: 4px;
+	position: absolute;
+	bottom: 40px;
+	right: 0px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    display: none;
+}
+.profile {
+    width: 90px;
+	height: 30px;
+	border: none;
+	color: rgb(240, 241, 243);
+    list-style-type: none;
+    cursor: pointer;
+	background: rgb(90, 156, 245)  no-repeat;
+	border-radius: 4px;
+	position: absolute;
+	bottom: 75px;
+	right: 0px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    display: none;
+}
+/**
+* 内容样式从此开始
+*/
+.content {
+    width: 70%;
+    position: absolute;
+    left: 300px;
+    margin-left: 4.5%;
+}
+.content .inbox {
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 42px;
+    margin: 60px 0 20px;
+    position: relative;
+}
+.inbox h2 {
+    float: left;
+    padding-left: 12px;
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 600;
+}
+.content h1 {
+    width: 3.5%;
+    margin-top: 40px;
+    margin-left: 0.5%;
+    margin-bottom: 15px;
+    font-size: 30px;
+    display: inline-block;
+}
+.content .underline {
+    width: 84.4%;
+    height: 18px;
+    margin-left: 1%;
+    margin-right: 10%;
+    font-weight: 500;
+    font-size: 16px;
+    position: absolute;
+    color: rgb(128, 132, 139);
+    display: inline-block;
+    border-top: solid 1px rgb(225, 227, 230);
+    position: relative;
+}
+.underline .more {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    width: 36px;
+    height: 20px;
+    background: url("../img/更多.png") no-repeat 0px -5px/34px;
+}
+.list {
+    width: 84.4%;
+    padding-right: 60px;
+    position: relative;
+}
+.list .checkbox {
+    height: 40px;
+    width: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+}
+.list h3, .remind, p {
+    margin-left: 30px;
+    position: relative;
+}
+.list h3 {
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 16px;
+    display: inline-block;
+    user-select: text;
+}
+.list .time {
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(170, 171, 176);
+}
+.list p {
+    margin-top: 2px;
+    color: rgb(170, 171, 176);
+    font-size: 15px;
+    user-select: text;
+}
+.list .remind {
+    margin-left: 10px;
+    display: inline-block;
+    margin-bottom: -5px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/铃声.png") no-repeat 0px 0px/20px;
+}
+.list .trashcan {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    background: #F5F5F5 url("../img/垃圾桶.png") no-repeat 13px 7px/25px;
+}
+
+/**
+* 新增效果
+*/
+.dialog-mask {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 80;
+}
+.opacity { /*遮罩浑浊处理*/
+    opacity: 0.7;
+    filter: alpha(opacity=30);
+    background-color: #000;
+}
+.addList {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 700px;
+    height: 290px;
+    margin-left: -350px;
+    margin-top: -145px;
+    z-index: 100; /*值越大，和其他层层叠时越在上面*/
+    background-color: #fff;
+    border-radius: 15px;
+}
+.addList .add-title {
+	width: 580px;
+	height: 22px;
+	padding: 4px 8px;
+    margin: 35px 50px 5px;
+	font-size: 16px;
+	border:none;
+    outline: none;
+	border-radius: 5px;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+.addList .postscript {
+    width: 580px;
+    margin: 5px 50px 55px;
+    padding: 4px 8px;
+    display: block;
+    font-size: 16px;
+    border: none;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+.addList .schedule {
+    font-size: 26px;
+    position: absolute;
+    top: 160px;
+    right: 110px;
+    transition: all 0.6s ease;
+}
+.addList #time {
+    display: block;
+    position: absolute;
+    top: 158px;
+    right: 108px;
+    width: 0px;
+    padding: 8px 0;
+    font-size: 14px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    transition: all 0.6s;
+    color: #bfbfbf;
+    caret-color: rgb(36, 120, 233);
+    background-color: rgb(240, 241, 243);
+}
+.addList .disableAlarm {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 161px;
+    right: 63px;
+    display: none;
+    background: url("../img/关闭闹钟.png") no-repeat 0px 0px/25px;
+}
+
+.addList .enableAlarm {
+    position: absolute;
+    top: 161px;
+    right: 63px;
+    display: inline-block;
+    font-size: 25px;
+}
+.addList .button {
+	width: 300px;
+	height: 47px;
+    margin: 20px 200px;
+	border: none;
+    background: rgb(247, 249, 254) no-repeat;
+	border-radius: 5px;
+    color: rgb(36, 120, 233);
+    font-weight: 500;
+	font-size: 16px;
+}
+.addList .button:hover {
+	cursor: pointer;
+	color: rgb(25, 80, 167);
+}
+
+.add {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(90, 156, 245);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+    transition: all 0.2s;
+}
+.add:hover {
+	cursor: pointer;
+	background: rgb(90, 156, 245) no-repeat;
+}

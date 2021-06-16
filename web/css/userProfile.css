@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.box {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+    width: 290px;
+    height: 330px;
+	margin-top: -225px;
+	margin-left: -190px;
+    padding: 20px 30px 30px;
+	border-radius: 8px;
+    border: solid 1px rgb(210, 212, 216);
+}
+h3 {
+	font-weight: 500;
+	padding-top: 10px;
+	padding-bottom: 32px;
+}
+.box1 {
+    width: 250px;
+    height: 30px;
+    margin: 35px 40px 30px;
+}
+.changePass {
+    width: 250px;
+    height: 30px;
+    margin: 35px 40px 30px;
+}
+.page {
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.page p {
+    font-size: 17px;
+    float: left;
+    line-height:30px;
+    color: rgb(85, 85, 88);
+}
+.signIn {
+    position: absolute;
+	top: 300px;
+	left: 50%;
+	width: 300px;
+	height: 47px;
+	margin-left: -150px;
+	border-radius: 5px;
+	display: inline-block;
+    background: rgb(247, 249, 254) no-repeat;
+	text-decoration: none;
+}
+.signIn p {
+	font-weight: 500;
+	text-align: center;
+	line-height: 47px;
+	font-size: 16px;
+	color: rgb(36, 120, 233);
+}
+.signIn:hover p {
+	cursor: pointer;
+	color: rgb(25, 80, 167);
+}
+.copyright {
+	position: absolute;
+	top: 410px;
+	left: 50%;
+	margin-left: -91px;
+	font-size: 14px;
+	color: rgb(108, 117, 125);
+}
+.power {
+	position: absolute;
+	top: 443px;
+	left: 50%;
+	margin-left: -102px;
+}
+.power p{
+	display: inline-block;
+	font-size: 14px;
+	color: rgb(108, 117, 125);
+}
+.power .bullet {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin-bottom: 2px;
+	background-color: rgb(108, 117, 125);
+	border-radius: 50%;
+}
+.power .author {
+	display: inline-block;
+	font-size: 15px;
+	color: rgb(103, 120, 239);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Reset Password</title>
+		<link rel="stylesheet" type="text/css" href="./css/forgetPass.css" />
+		<script type="text/javascript" src="./js/forgetPass.js"></script>
+		<script src="./js/iconfont.js"></script>
+	</head>
+	<body>
+		<div class="box">
+			<h3>找回密码</h3>
+			<p>我们将会发送一封包含验证码的邮件到您的邮箱</p>
+			<ul>
+				<li>邮箱</li>
+				<li>验证码</li>
+				<li>新密码</li>
+				<li>确认</li>
+			</ul>
+			<!-- 账号模块 -->
+			<input type="text" class="account" maxlength="35" />
+			<div class="box1">
+				<svg class="icon" aria-hidden="true" transform="translate(0,3)">
+					<use xlink:href="#icon-warning"></use>
+				</svg>
+				<span>此邮箱不存在</span>
+			</div>
+			<input type="button" class="button" value="找回" id="findPassword" />
+			<!-- 验证码模块 -->
+			<input type="text" class="verificationCode" maxlength="4" />
+			<div class="box1">
+				<svg class="icon" aria-hidden="true" transform="translate(0,3)">
+					<use xlink:href="#icon-warning"></use>
+				</svg>
+				<span>请输入验证码</span>
+			</div>
+			<input type="button" class="button" value="确认" id="sendVerificationCode" />
+			<!-- 修改密码模块 -->
+			<input type="password" class="password" maxlength="18" />
+			<input type="password" class="confirmPassword" maxlength="18" />
+			<div class="box1">
+				<svg class="icon" aria-hidden="true" transform="translate(0,3)">
+					<use xlink:href="#icon-warning"></use>
+				</svg>
+				<span>请输入新密码</span>
+			</div>
+			<div class="box1">
+				<svg class="icon" aria-hidden="true" transform="translate(0,3)">
+					<use xlink:href="#icon-warning"></use>
+				</svg>
+				<span>请输入确认密码</span>
+			</div>
+			<input type="button" class="button" value="修改" id="changePassword" />
+
+			<a href="./signIn.html" class="signIn"><p>返回登录</p></a>
+		</div>
+	</body>
+</html>

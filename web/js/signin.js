@@ -118,6 +118,7 @@ window.onload = function () {
 			span[1].innerHTML = "输入密码";
 			box1[1].style.display = "block";
 			password.style.borderColor = redColor;
+            password.style.outlineColor = redColor;
 		} else {
 			//去链接ajax
 			var loading = document.querySelector(".loading");
@@ -140,8 +141,6 @@ window.onload = function () {
                 setTimeout(function () {
                     window.location.href = "todoList.html";
                 }, 1000);
-
-                // alert("登录成功");
 			} else if (result == 1) {
 				//帐号不存在
 				warning[0] = true;
@@ -156,6 +155,7 @@ window.onload = function () {
 				span[1].innerHTML = "密码错误，重试或点击“忘记密码”以重置密码";
 				li[1].style.color = redColor;
 				password.style.borderColor = redColor;
+				password.style.outlineColor = "rgb(220, 69, 58)";
 			}
 		}
 	};
